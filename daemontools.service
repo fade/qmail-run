@@ -1,0 +1,10 @@
+[Unit]
+Description=Daemontools service supervision
+ConditionPathExists=/command/svscanboot
+
+[Service]
+ExecStart=/usr/bin/svscanboot
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
