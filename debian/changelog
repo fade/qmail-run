@@ -1,9 +1,10 @@
-qmail-run (2.0.2+nmu3) UNRELEASED; urgency=medium
+qmail-run (2.0.2+nmu4) UNRELEASED; urgency=medium
 
   * Non-maintainer upload.
 
+  * Migrate to a systemd service file from inittab. 
 
- -- Brian O'Reilly <fade@deepsky.com>  Fri, 24 May 2024 13:21:35 -0400
+ -- Brian O'Reilly <fade@deepsky.com>  Sun, 26 May 2024 13:52:44 -0400
 
 qmail-run (2.0.2+nmu1) unstable; urgency=medium
 
