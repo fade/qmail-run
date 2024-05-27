@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_VERBOSE=1
+
 DIR=$(shell pwd)/debian/qmail-run
 
 build: deb-checkdir build-stamp
@@ -31,6 +33,8 @@ install: deb-checkdir deb-checkuid build-stamp
 	ln -s /etc/qmail/qmail-verify '$(DIR)'/var/lib/qmail/supervise/
 	install -d -m0755 '$(DIR)'/usr/share/qmail-run/default
 	install -m0644 aliases '$(DIR)'/usr/share/qmail-run/default
+	install -d -m0755 '$(DIR)'/lib/systemd/system
+	install -m0755 daemontools.service '$(DIR)'/lib/systemd/system
 
 binary-arch:
 
